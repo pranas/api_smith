@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    api_smith (1.1.0)
+    api_smith (1.2.0)
       hashie (~> 1.0)
       httparty
       net-http-persistent
@@ -9,12 +9,13 @@ PATH
 GEM
   remote: http://rubygems.org/
   specs:
+    archive-tar-minitar (0.5.2)
     awesome_print (0.4.0)
     bluecloth (2.1.0)
     builder (3.0.0)
     ci_reporter (1.6.5)
       builder (>= 2.1.2)
-    columnize (0.3.3)
+    columnize (0.3.6)
     diff-lcs (1.1.2)
     fuubar (0.0.5)
       rspec (~> 2.0)
@@ -32,7 +33,9 @@ GEM
     json (1.5.3)
     linecache (0.46)
       rbx-require-relative (> 0.0.4)
-    multi_json (1.0.4)
+    linecache19 (0.5.13)
+      ruby_core_source (>= 0.1.4)
+    multi_json (1.1.0)
     multi_xml (0.4.1)
     net-http-persistent (2.5.2)
     rack (1.3.0)
@@ -55,12 +58,22 @@ GEM
       ruby-debug-base (~> 0.10.4.0)
     ruby-debug-base (0.10.4)
       linecache (>= 0.3)
+    ruby-debug-base19 (0.11.26)
+      columnize (>= 0.3.1)
+      linecache19 (>= 0.5.11)
+      ruby_core_source (>= 0.1.4)
+    ruby-debug19 (0.11.6)
+      columnize (>= 0.3.1)
+      linecache19 (>= 0.5.11)
+      ruby-debug-base19 (>= 0.11.19)
     ruby-progressbar (0.0.10)
+    ruby_core_source (0.1.5)
+      archive-tar-minitar (>= 0.5.2)
     sham_rack (1.3.3)
       rack
     sinatra (1.2.6)
       rack (~> 1.1)
-      tilt (< 2.0, >= 1.2.2)
+      tilt (>= 1.2.2, < 2.0)
     thor (0.14.6)
     tilt (1.3.2)
     yard (0.7.2)
@@ -78,12 +91,16 @@ DEPENDENCIES
   guard
   guard-rspec
   json
+  linecache19 (>= 0.5.13)
   rake
   rb-fsevent
+  rbx-require-relative (= 0.0.5)
   rcov
   rr
   rspec (~> 2.0)
-  ruby-debug
+  ruby-debug (>= 0.10)
+  ruby-debug-base19 (>= 0.11.26)
+  ruby-debug19 (>= 0.11.6)
   sham_rack
   sinatra
   yard
