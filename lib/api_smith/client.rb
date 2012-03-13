@@ -114,7 +114,7 @@ module APISmith
         # Finally, use HTTParty to get the response
         response = nil
         instrument_request method, full_path, options do
-          response = self.class.send method, full_path, request_options
+          response = self.class.send(method, full_path, request_options).parsed_response
         end
         # Pre-process the response to check for errors.
         check_response_errors response
