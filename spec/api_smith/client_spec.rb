@@ -66,6 +66,12 @@ describe APISmith::Client do
   end
 
   describe 'passing options' do
+    describe 'extra body options' do
+      it 'should not override request options' do
+        response = client.post('/echo', :extra_request => { :body => 'echo=World' }, :extra_body => {:echo => "Hello"})
+        response["echo"].should == "World"
+      end
+    end
 
     it 'should allow you to pass extra query string options' do
       response = client.get('/echo', :extra_query => {:echo => "Hello"})
