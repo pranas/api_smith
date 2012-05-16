@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.description = "APISmith provides tools to make working with structured HTTP-based apis even easier."
   s.required_rubygems_version = ">= 1.3.6"
 
-  s.add_dependency 'httparty'
+  s.add_dependency 'httparty', '~> 0.8.3'
   s.add_dependency 'hashie',   '~> 1.0'
   s.add_dependency 'net-http-persistent'
 
